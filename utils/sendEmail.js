@@ -10,10 +10,10 @@ module.exports = async (user, mailType) => {
       port: 587,
       secure: true,
       auth: {
-        // user: "sheylearnings@gmail.com",
-        // pass: "tpopnnfykrzwuiob",
-         user: "robinchuru123@gmail.com",
-        pass: "gzucuvgyiyniymon"
+        user: "sheylearnings@gmail.com",
+        pass: "tpopnnfykrzwuiob",
+        //  user: "robinchuru123@gmail.com",
+        // pass: "gzucuvgyiyniymon"
       },
     });
 
@@ -31,7 +31,7 @@ module.exports = async (user, mailType) => {
       emailContent = `<div><h1>Please click on the below link to verify your email address</h1> <a href="http://localhost:3000/verifyemail/${encryptedToken}">${encryptedToken}</a>  </div>`;
 
       mailOptions = {
-        from: "robinchuru123@gmail.com",
+        from: "sheylearnings@gmail.com",
         to: user.email,
         subject: "Verify Email For MERN Auth",
         html: emailContent,
@@ -40,7 +40,7 @@ module.exports = async (user, mailType) => {
       emailContent = `<div><h1>Please click on the below link to reset your password</h1> <a href="http://localhost:3000/resetpassword/${encryptedToken}">${encryptedToken}</a>  </div>`;
 
       mailOptions = {
-        from: "robinchuru123@gmail.com",
+        from: "sheylearnings@gmail.com",
         to: user.email,
         subject: "Reset password For MERN Auth",
         html: emailContent,
